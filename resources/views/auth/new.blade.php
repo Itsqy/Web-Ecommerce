@@ -33,7 +33,7 @@
                         <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
                         @error('username')
                             <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                                <strong>id kamu salah</strong>
                             </span>
                         @enderror
                     </div>
@@ -42,16 +42,22 @@
                     <div class="col-md-6">
                         <input type="password" id="password" class="fadeIn third" name="password"
                             placeholder="password">
-                        @error('username')
+                        @error('password')
                             <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                                <strong>password kamu salah juga beb</strong>
                             </span>
                         @enderror
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+
+                    </div>
+                </div>
 
 
-                <input type="submit" class="fadeIn fourth" value="Log In">
+
             </form>
 
 
