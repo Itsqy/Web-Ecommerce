@@ -35,7 +35,7 @@ h2 {
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column  ;
   justify-content: center;
   width: 100%;
   min-height: 100%;
@@ -43,17 +43,17 @@ h2 {
 }
 
 #formContent {
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #fff;
-  padding: 30px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  padding: 0px;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  text-align: center;
+  -webkit-border-radius: 10px 10px 10px 10px !important;
+  border-radius: 10px 10px 10px 10px !important ;
+  background: #fff !important ;
+  padding: 30px !important ;
+  width: 90% !important ;
+  max-width: 450px !important ;
+  position: relative !important ;
+  padding: 0px !important ;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3) !important ;
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3) !important ;
+  text-align: center !important ;
 }
 
 #formFooter {
@@ -92,7 +92,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4) !important;
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
@@ -263,5 +263,5 @@ input[type=text]:placeholder {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }

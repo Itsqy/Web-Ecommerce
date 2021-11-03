@@ -28,7 +28,7 @@ class ProdukController extends Controller
         $kategori = Kategori::all();
         $title = "Data Produk";
         $i = 1;
-        $produk = Produk::orderBy('id', 'desc')->paginate(2);
+        $produk = Produk::orderBy('id', 'desc')->paginate(5);
         return view('user.produk.index', [
             'produk' => $produk,
             'title' => $title,

@@ -77,7 +77,7 @@ warning-color : #ffa534
 danger-color : #f3545d
 
 -------------------------------------------------------------------*/
- 
+
 @import "atlantis/variables";
 @import "atlantis/outlinefocus";
 @import "atlantis/typography";
@@ -99,3 +99,11 @@ danger-color : #f3545d
 //Background
 @import "atlantis/background";
 
+//Login
+@import "atlantis/login";
+
+//404
+@import "atlantis/pagenotfound";
+
+//Background
+@import "atlantis/background";

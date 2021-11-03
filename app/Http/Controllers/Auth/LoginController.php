@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Kategori;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -37,13 +38,15 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    public function username()
-    {
-        return 'username';
-    }
+    // public function username()
+    // {
+    //     return 'username';
+    // }
 
-    public function showLoginForm()
-    {
-        return view('auth.new');
-    }
+    // public function showLoginForm()
+    // {
+    //     $kategori = Kategori::all();
+    //     $title = 'login';
+    //     return view('auth.new', compact('title', 'kategori'));
+    // }
 }

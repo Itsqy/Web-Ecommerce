@@ -4,11 +4,21 @@
 
     {{-- biar carousel nya cuma ad pas di index doang , makanya dimasukin di index,blade ny aja , di panggil dsini --}}
 
+    <section class="section container mt-5 d-flex justify-content-center">
+        <form action="{{ route('landing.cari') }}">
+            <div class="input-group mb-3">
+                <input value="{{ $keyword }}" type="text" class="form-control" name="cari"
+                    placeholder="ccari aku .. ikeh a" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <button class="btn btn-primary" type="submit" id="basic-addon2">search</button>
+            </div>
+        </form>
+    </section>
+
 
 
     <section class="container mt-5 mb-5">
         <h3 class="d-flex justify-content-between">
-            <strong>semua dah</strong>
+            <strong>search dulu</strong>
         </h3>
         <!-- card title -->
 
