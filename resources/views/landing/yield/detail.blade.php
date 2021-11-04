@@ -72,6 +72,7 @@
                             </tr>
                             <tr>
                                 <td>Jumlah</td>
+                                <td>:</td>
                                 <td colspan="3"><input name="jumlah" type="number">
                                 </td>
 
@@ -82,7 +83,9 @@
 
                             <tr>
                                 <td>Catatan</td>
-                                <td colspan="55"><input name="catatan" type="text"></td>
+                                <td>:</td>
+                                <td colspan="55"><textarea type="text" name="catatan" class="form-control mt-2"
+                                        style="height: 139px;"></textarea></td>
                                 <td></td>
                             </tr>
 

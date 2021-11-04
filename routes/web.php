@@ -42,14 +42,18 @@ Route::get('/search', [ProdukController::class, 'search'])->name('search');
 
 // landing
 Route::delete('/destroy/{id}', [LandingController::class, 'destroy'])->name('landing.destroy');
+Route::get('/history', [LandingController::class, 'history'])->name('landing.history');
+Route::put('/addressupdate', [LandingController::class, 'addressupdate'])->name('landing.addressupdate');
 Route::get('/keranjang', [LandingController::class, 'keranjang'])->name('landing.keranjang');
 Route::post('/tambah-produk', [LandingController::class, 'tambahproduk'])->name('landing.tambah');
 Route::get('/searchproduk', [LandingController::class, 'searchproduk'])->name('landing.cari');
+Route::get('/pembayaran', [LandingController::class, 'pembayaran'])->name('landing.bayar')->middleware('auth');
 Route::get('/semuaproduk', [LandingController::class, 'semuaproduk'])->name('landing.semua');
 Route::get('/kategori/{slug}', [LandingController::class, 'perkategori'])->name('landing.kategori');
 Route::get('/detail/{slug}', [LandingController::class, 'detailproduk'])->name('produk.detail');
 Route::get('/', [App\Http\Controllers\Landing\LandingController::class, 'index'])->name('landing');
 
+//kategori
 Route::get('/kategori', [App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index')->middleware('auth');
 Route::post('/kategori-add', [App\Http\Controllers\KategoriController::class, 'addKategori'])->name('kategori.add')->middleware('auth');
 Route::put('/kategori-update/{id}', [App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.update')->middleware('auth');

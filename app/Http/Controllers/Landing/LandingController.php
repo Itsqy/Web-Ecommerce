@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DetailPesanan;
 use App\Models\Kategori;
 use App\Models\Pesanan;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class LandingController extends Controller
@@ -47,19 +48,16 @@ class LandingController extends Controller
     }
     public function perkategori($slug)
     {
-
-
-
-
         $nm_kt = Kategori::where('slug', $slug)->first();
         $title = "kategori $nm_kt->nama_kategori";
         $produk = Produk::where('kategori_id', $nm_kt->id)->get();
         return view('landing.yield.per-kategori', compact('produk', 'title', 'nm_kt'));
     }
+
+
+
     public function semuaproduk()
     {
-
-
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
         if ($pesanan) {
             $jumlah = DetailPesanan::where('pesanan_id', $pesanan->id)->count();
@@ -175,5 +173,39 @@ class LandingController extends Controller
         }
 
         return redirect()->back()->with('Success', "$produk->nama berhasil dihapus");
+    }
+    public function pembayaran()
+    {
+
+        $title = "bayar";
+
+        if (Auth::user()) {
+            $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        }
+
+        return view('landing.yield.pembayaran', [
+            'title' => $title,
+            'pesanan' => $pesanan
+        ]);
+    }
+
+    public function addressupdate(Request $request)
+    {
+        // dd($request);
+        $user = User::where('id', $request->id)->first();
+        $user->address = $request->address;
+        $user->update();
+
+        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        $pesanan->status = 1;
+        $pesanan->update();
+
+
+        return redirect()->route('landing.history');
+    }
+    public function history()
+    {
+        $title = 'title';
+        return view('landing.yield.history', compact('title'));
     }
 }

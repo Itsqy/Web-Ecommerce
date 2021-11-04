@@ -8,7 +8,6 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('landing') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Detail</li>
                     <li class="breadcrumb-item active" aria-current="page">keranjang</li>
                 </ol>
             </nav>
@@ -87,7 +86,10 @@
                             </tr>
                             <tr>
                                 <td colspan="6" text-align="right">
-                                <td href="checkout.html"> <button type="button" class="btn btn-primary">Checkout</button>
+                                <td>
+                                    <a href="{{ route('landing.bayar') }}"><button type="button"
+                                            class="btn btn-primary">Checkout</button></a>
+
                                 </td>
                                 </a>
 
