@@ -52,10 +52,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($Username)
+    public function show($username)
     {
         $title = 'show';
-        $User = User::where('Username', $Username)->first();
+        $User = User::where('username', $username)->first();
         return view('user.konten.show', [
             'User' => $User,
             'title' => $title
@@ -68,10 +68,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($Username)
+    public function edit($username)
     {
         $title = "Edit Profile";
-        $User = User::where('Username', $Username)->first();
+        $User = User::where('username', $username)->first();
         return view('user.konten.edit', [
             'User' => $User,
             'title' => $title
@@ -85,14 +85,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $Username)
+    public function update(Request $request, $username)
     {
 
         // return ddd($request);
         $title = "My Profile";
 
         if (empty($request->file('image'))) {
-            $User = User::where('Username', $Username)->first();
+            $User = User::where('Username', $username)->first();
             $User->update([
                 'name'          => $request->name,
                 'username'      => $request->username,
@@ -106,7 +106,7 @@ class UserController extends Controller
                 'title' => $title
             ]);
         } else {
-            $User = User::where('Username', $Username)->first();
+            $User = User::where('username', $username)->first();
             Storage::delete($User->image);
             $User->update([
                 'name'          => $request->name,
