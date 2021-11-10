@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
     <div class="container" style="padding: 90px 0 90px 0;">
