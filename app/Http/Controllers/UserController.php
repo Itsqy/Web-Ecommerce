@@ -92,7 +92,7 @@ class UserController extends Controller
         $title = "My Profile";
 
         if (empty($request->file('image'))) {
-            $User = User::where('Username', $username)->first();
+            $User = User::where('username', $username)->first();
             $User->update([
                 'name'          => $request->name,
                 'username'      => $request->username,
