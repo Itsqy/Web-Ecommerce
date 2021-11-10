@@ -16,6 +16,7 @@ class UserController extends Controller
 
     public function index()
     {
+
         $title = 'index';
         $JumlahUser = User::where('role', 'user')->count();
         return view('user.konten.index', [
