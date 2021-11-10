@@ -131,7 +131,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Yakin Mau Ubah Alamat ?
+                                    Yakin Mau Ubah bayar ?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Gajadi</button>

@@ -65,7 +65,7 @@ class LandingController extends Controller
 
         $title = 'semuaproduk';
         $produk = Produk::orderBy('id', 'desc')->get();
-        return view('landing.yield.semua', compact('title', 'produk', 'jumlah'));
+        return view('landing.yield.semua', compact('title', 'produk',));
     }
     public function searchproduk(Request $request)
     {
@@ -205,7 +205,17 @@ class LandingController extends Controller
     }
     public function history()
     {
-        $title = 'title';
-        return view('landing.yield.history', compact('title'));
+
+        $i = 1;
+        $title = 'history';
+        //nyari user pesanna berdasarkan ID
+        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1, 2)->get();
+        //nyari detailpesanna berdasarkan pesanan id
+
+        if ($pesanan) {
+            $pesanan = Pesanan::where('user_id', Auth::user()->id)->get();
+        }
+
+        return view('landing.yield.history', compact('title', 'pesanan', 'i'));
     }
 }
