@@ -93,11 +93,11 @@
                                                 <label>Photo :</label>
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-8">
-                                                @if (Auth::user()->image == '')
+                                                @if (Auth::user()->img == '')
                                                     <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}"
                                                         alt="..." class="avatar-img ">
                                                 @else
-                                                    <img src="{{ $User->image }}" class="avatar-img " alt="">
+                                                    <img src="{{ $User->img }}" class="avatar-img " alt="">
                                                 @endif
 
                                             </div>

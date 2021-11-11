@@ -60,11 +60,11 @@
                             <li>
                                 <div class="user-box">
                                     <div class="avatar-lg">
-                                        @if (Auth::user()->image == '')
+                                        @if (Auth::user()->img == '')
                                             <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}"
                                                 alt="..." class="avatar-img rounded-circle">
                                         @else
-                                            <img src="{{ url('storage', Auth::user()->image) }}"
+                                            <img src="{{$User->img) }}"
                                                 class="avatar-img rounded-circle" alt="">
                                         @endif
                                     </div>

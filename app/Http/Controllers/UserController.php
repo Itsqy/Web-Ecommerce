@@ -92,7 +92,7 @@ class UserController extends Controller
         // return ddd($request);
         $title = "My Profile";
 
-        if (empty($request->image)) {
+        if (empty($request->img)) {
             $User = User::where('username', $username)->first();
             $User->update([
                 'name'          => $request->name,
