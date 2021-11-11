@@ -8,7 +8,8 @@
                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('landing/img/w2.jpg') }}" class="d-block w-100" alt="...">
+            <img src="{{ url('https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dessert-main-image-molten-cake-0fbd4f2.jpg?quality=90&webp=true&resize=375,341') }}"
+                class="d-block w-100" alt="...">
         </div>
     </div>
 </div>
