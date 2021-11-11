@@ -125,8 +125,7 @@
                                                         style="max-width: 100px !important; border-radius:5px;">
                                                 </div>
                                                 <div class="form-group form-show-notify row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
-                                                    </div>
+
                                                     <div class="col-lg-4 col-md-9 col-sm-8">
                                                         <input type="text" name="img">
                                                     </div>
