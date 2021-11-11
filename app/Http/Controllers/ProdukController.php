@@ -50,7 +50,8 @@ class ProdukController extends Controller
             'harga' => $request->harga,
             'sedia' => $request->sedia,
             'berat' => $request->berat,
-            'img' => $request->file('img')->store('image-data'),
+            'img' => $request->img,
+            // 'img' => $request->file('img')->store('image-data')//udah bener ini kalo misal kalian udh ad amazonnya
             'slug' => Str::slug($request->nama, '-'),
         ]);
 
@@ -141,7 +142,8 @@ class ProdukController extends Controller
                 'sedia' => $request->sedia,
                 'berat' => $request->berat,
                 'slug' => Str::slug($request->nama, '-'),
-                'img' => $request->file('img')->store('image-data')
+                // 'img' => $request->file('img')->store('image-data')//udah bener ini kalo misal kalian udh ad amazonnya
+                'img' => $request->img
             ]);
             return redirect()->route('produk.index')->with('succsess', 'Data Telah di ubah!');
         }
