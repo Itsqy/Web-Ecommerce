@@ -38,7 +38,7 @@
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td>
-                                    <img src="{{ url('storage/' . $d->produk->img) }}" class="img-fluid" width="200">
+                                    <img src="{{ $d->produk->img }}" class="img-fluid" width="200">
                                 </td>
                                 <td>{{ $d->produk->nama }}</td>
                                 <td>{{ $d->jumlah_pesanan }}</td>

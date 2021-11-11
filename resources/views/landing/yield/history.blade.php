@@ -62,8 +62,7 @@
                                     <td>
                                         <?php $detail = App\Models\DetailPesanan::where('pesanan_id', $pesan->id)->get(); ?>
                                         @foreach ($detail as $row)
-                                            <img src="{{ url('storage/' . $row->produk->img) }}" class="img-fluid"
-                                                width="200">
+                                            <img src="{{ $row->produk->img }}" class="img-fluid" width="200">
                                             {{ $row->produk->nama }}
                                             <br>
                                         @endforeach
@@ -87,8 +86,8 @@
 
 
                             <!-- <tr>
-                                                                                                              <td colspan="7">Data Kosong</td>
-                                                                                                            </tr>             -->
+                                                                                                                  <td colspan="7">Data Kosong</td>
+                                                                                                                </tr>             -->
                         </tbody>
                     </table>
                 </div>

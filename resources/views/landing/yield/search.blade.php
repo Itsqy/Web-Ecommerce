@@ -28,7 +28,7 @@
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body text-center">
-                            <img src="{{ url('storage/' . $pro->img) }}" class="img-fluid" alt="...">
+                            <img src="{{ $pro->img }}" class="img-fluid" alt="...">
                             <div class="row mt-2">
                                 <h5 class="card-title">{{ $pro->nama }}</h5>
                                 <p class="card-text"> Rp.{{ number_format($pro->harga) }}</p>

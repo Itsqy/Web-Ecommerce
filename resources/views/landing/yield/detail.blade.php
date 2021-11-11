@@ -24,7 +24,7 @@
             <div class="col -md-6 mt-3">
                 <div class="card">
                     <div class="card-body text-center">
-                        <img src="{{ url('storage/' . $produk->img) }}" class="img-fluid" alt="...">
+                        <img src="{{ $produk->img }}" class="img-fluid" alt="...">
                     </div>
                 </div>
             </div>
