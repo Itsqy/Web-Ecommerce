@@ -103,7 +103,7 @@
                                                 <div class="col-lg-3 col-md-3 col-sm-4 text-right">
                                                 </div>
                                                 <div class="col-lg-4 col-md-9 col-sm-8">
-                                                    <input type="text" name="img">
+                                                    <input type="text" name="image">
                                                 </div>
                                             </div>
 
