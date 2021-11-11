@@ -64,8 +64,7 @@
                                             <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}"
                                                 alt="..." class="avatar-img rounded-circle">
                                         @else
-                                            <img src="{{$User->img) }}"
-                                                class="avatar-img rounded-circle" alt="">
+                                            <img src="{{ $User->img }}" class="avatar-img rounded-circle" alt="">
                                         @endif
                                     </div>
                                     <div class="u-text">
@@ -77,7 +76,8 @@
                             </li>
                             <li>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('profile.show', Auth::user()->username) }}"> My
+                                <a class="dropdown-item" href="{{ route('profile.show', Auth::user()->username) }}">
+                                    My
                                     Profile </a>
                                 <a class=" dropdown-item"
                                     href="{{ route('profile.edit', Auth::user()->username) }}">Edit
