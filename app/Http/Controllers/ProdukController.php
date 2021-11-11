@@ -119,7 +119,7 @@ class ProdukController extends Controller
 
         // return ddd($request);
 
-        if (empty($request->file('img'))) {
+        if (empty($request->img)) {
             $produk = Produk::findOrFail($id);
 
             $produk->update([
