@@ -97,8 +97,7 @@
                                                     <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}"
                                                         alt="..." class="avatar-img ">
                                                 @else
-                                                    <img src="{{ $User->image) }}"
-                                                        class="avatar-img " alt="">
+                                                    <img src="{{ $User->image }}" class="avatar-img " alt="">
                                                 @endif
 
                                             </div>
