@@ -134,7 +134,6 @@ class ProdukController extends Controller
             return redirect()->route('produk.index')->with('succsess', 'Data Telah diubah!');
         } else {
             $produk = Produk::findOrFail($id);
-            Storage::delete($produk->img);
             $produk->update([
                 'nama' => $request->nama,
                 'harga' => $request->harga,
