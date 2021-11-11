@@ -8,7 +8,7 @@
                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ url('https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dessert-main-image-molten-cake-0fbd4f2.jpg?quality=90&webp=true&resize=375,341') }}"
+            <img src="{{ url('https://images.unsplash.com/photo-1551024601-bec78aea704b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80') }}"
                 class="d-block w-100" alt="...">
         </div>
     </div>
