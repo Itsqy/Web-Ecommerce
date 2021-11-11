@@ -8,7 +8,7 @@
                          <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}" alt="..."
                              class="avatar-img rounded-circle">
                      @else
-                         <img src="{{ url('storage', Auth::user()->image) }}" class="avatar-img rounded-circle" alt="">
+                         <img src="{{ $User->image }}" class="avatar-img rounded-circle" alt="">
                      @endif
 
                  </div>
