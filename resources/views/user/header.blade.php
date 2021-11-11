@@ -50,7 +50,7 @@
                                 <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}" alt="..."
                                     class="avatar-img rounded-circle">
                             @else
-                                <img src="{{ $User->img }}" class="avatar-img rounded-circle" alt="">
+                                <img src="{{ $User->image }}" class="avatar-img rounded-circle" alt="">
                             @endif
 
                         </div>
@@ -64,7 +64,7 @@
                                             <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}"
                                                 alt="..." class="avatar-img rounded-circle">
                                         @else
-                                            <img src="{{ $User->img }}" class="avatar-img rounded-circle" alt="">
+                                            <img src="{{ $User->image }}" class="avatar-img rounded-circle" alt="">
                                         @endif
                                     </div>
                                     <div class="u-text">
