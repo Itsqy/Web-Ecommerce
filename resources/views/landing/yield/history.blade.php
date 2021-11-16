@@ -51,25 +51,44 @@
                             </tr>
                         </thead>
 
+
                         <tbody>
-                            fore
-                            <tr>
-                                <td>1</td>
-                                <td>2021-09-08 13:49:48</td>
-                                <td>8957501u19jxcbnjkb</td>
-                                <td>
-                                    <img src="img/produk/baju-1.jpg" class="img-fluid" width="50">
-                                    Baju
-                                    <br>
-                                </td>
-                                <td>Lunas</td>
-                                <td><strong>Rp. 200.312</strong></td>
-                                <td></td>
-                            </tr>
+                            @foreach ($pesanan as $pesan)
+                                <tr>
+                                    <td>{{ $i++ }}</td>
+                                    <td>{{ $pesan->created_at }}</td>
+                                    <td>{{ $pesan->kode_pemesanan }}</td>
+
+                                    <td>
+                                        <?php $detail = App\Models\DetailPesanan::where('pesanan_id', $pesan->id)->get(); ?>
+                                        @foreach ($detail as $row)
+                                            <img src="{{ url('storage/' . $row->produk->img) }}" class="img-fluid"
+                                                width="200">
+                                            {{ $row->produk->nama }}
+                                            <br>
+                                        @endforeach
+
+                                    </td>
+                                    <td>
+                                        @if ($pesan->status == 1)
+                                            <span class="badge bg-warning"> <i class="fas fa-history">pending</i></span>
+                                        @else
+                                            <span class="badge bg-success"> <i class="fas fa-check">lunas</i></span>
+                                        @endif
+
+                                    </td>
+                                    <td><strong>RP.{{ number_format($pesan->total_harga + $pesan->kode_unik) }}</strong>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            @endforeach
+
+
+
 
                             <!-- <tr>
-                          <td colspan="7">Data Kosong</td>
-                        </tr>             -->
+                                                                                                              <td colspan="7">Data Kosong</td>
+                                                                                                            </tr>             -->
                         </tbody>
                     </table>
                 </div>

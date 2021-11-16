@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\DataProdukController;
 use App\Http\Controllers\Landing\LandingController;
 
@@ -29,7 +30,7 @@ use App\Http\Controllers\Landing\LandingController;
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/profile', UserController::class)->middleware('auth');
@@ -58,3 +59,6 @@ Route::get('/kategori', [App\Http\Controllers\KategoriController::class, 'index'
 Route::post('/kategori-add', [App\Http\Controllers\KategoriController::class, 'addKategori'])->name('kategori.add')->middleware('auth');
 Route::put('/kategori-update/{id}', [App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.update')->middleware('auth');
 Route::delete('/kategori-delete/{id}', [App\Http\Controllers\KategoriController::class, 'delkategori'])->name('kategori.delete')->middleware('auth');
+
+//transaksi
+Route::get('/pending', [TransaksiController::class, 'pending'])->name('status.pending');
