@@ -46,11 +46,11 @@
                 <li class="nav-item dropdown hidden-caret">
                     <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                         <div class="avatar-sm">
-                            @if (Auth::user()->img == '')
+                            @if (Auth::user()->image == '')
                                 <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}" alt="..."
                                     class="avatar-img rounded-circle">
                             @else
-                                <img src="{{ $User->img }}" class="avatar-img rounded-circle" alt="">
+                                <img src="{{ $User->image }}" class="avatar-img rounded-circle" alt="">
                             @endif
 
                         </div>
@@ -60,11 +60,11 @@
                             <li>
                                 <div class="user-box">
                                     <div class="avatar-lg">
-                                        @if (Auth::user()->img == '')
+                                        @if (Auth::user()->image == '')
                                             <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}"
                                                 alt="..." class="avatar-img rounded-circle">
                                         @else
-                                            <img src="{{ $User->img }}" class="avatar-img rounded-circle" alt="">
+                                            <img src="{{ $User->image }}" class="avatar-img rounded-circle" alt="">
                                         @endif
                                     </div>
                                     <div class="u-text">
