@@ -4,11 +4,11 @@
          <div class="sidebar-content">
              <div class="user">
                  <div class="avatar-sm float-left mr-2">
-                     @if (Auth::user()->image == '')
+                     @if (Auth::user()->img == '')
                          <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}" alt="..."
                              class="avatar-img rounded-circle">
                      @else
-                         <img src="{{ $User->image }}" class="avatar-img rounded-circle" alt="">
+                         <img src="{{ $User->img }}" class="avatar-img rounded-circle" alt="">
                      @endif
 
                  </div>
