@@ -52,7 +52,7 @@
                                 </div>
                             </form>
                         </div>
-                        <!-- Start kode untuk form pencarian -->
+                        <!-- allert succes -->
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success">
                                 <p>{{ $message }}</p>

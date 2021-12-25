@@ -98,6 +98,7 @@ class UserController extends Controller
                 'name'          => $request->name,
                 'username'      => $request->username,
                 'email'         => $request->email,
+                'role'         => $request->role,
                 'number_phone'  => $request->number_phone,
                 'address'       => $request->address,
                 // 'image' => $request->file('image')->store('image-user'),

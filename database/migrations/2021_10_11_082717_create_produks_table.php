@@ -15,13 +15,13 @@ class CreateProduksTable extends Migration
     {
         Schema::create('produks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('kategori_id');
             $table->string('nama')->nullable();
             $table->integer('harga')->nullable();
             $table->string('sedia')->nullable();
             $table->integer('berat')->nullable();
             $table->text('img')->nullable();
             $table->string('slug')->nullable();
-
             $table->timestamps();
         });
     }

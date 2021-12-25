@@ -20,8 +20,7 @@ class ProdukController extends Controller
     {
 
         if (auth()->user()->role !== 'Admin') {
-            echo "Terlarang";
-            return;
+            abort(403);
         }
 
         // $produk = Produk::all();

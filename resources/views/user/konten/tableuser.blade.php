@@ -60,7 +60,7 @@
                                                         <td>{{ $users->number_phone }}</td>
                                                         <td>{{ $users->created_at }}</td>
                                                         <td>
-                                                            <img src="{{0 $users->image) }}" alt=""
+                                                            <img src="{{ $users->image }}" alt=""
                                                                 style="max-width: 100px !important; border-radius:5px;">
 
                                                         </td>
