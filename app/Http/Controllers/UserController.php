@@ -11,7 +11,11 @@ class UserController extends Controller
 
     public function __construct()
     {
+<<<<<<< HEAD
         $this->middleware(['auth']);
+=======
+        $this->middleware(['auth', 'verified']);
+>>>>>>> 19ca97850910fc2890a75d5caec1bd088081e734
     }
 
     public function index()

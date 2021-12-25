@@ -62,7 +62,12 @@
                                     <td>
                                         <?php $detail = App\Models\DetailPesanan::where('pesanan_id', $pesan->id)->get(); ?>
                                         @foreach ($detail as $row)
+<<<<<<< HEAD
                                             <img src="{{ $row->produk->img }}" class="img-fluid" width="200">
+=======
+                                            <img src="{{ url('storage/' . $row->produk->img) }}" class="img-fluid"
+                                                width="200">
+>>>>>>> 19ca97850910fc2890a75d5caec1bd088081e734
                                             {{ $row->produk->nama }}
                                             <br>
                                         @endforeach
@@ -86,8 +91,13 @@
 
 
                             <!-- <tr>
+<<<<<<< HEAD
                                                                                                                   <td colspan="7">Data Kosong</td>
                                                                                                                 </tr>             -->
+=======
+                                                                                                              <td colspan="7">Data Kosong</td>
+                                                                                                            </tr>             -->
+>>>>>>> 19ca97850910fc2890a75d5caec1bd088081e734
                         </tbody>
                     </table>
                 </div>

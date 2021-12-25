@@ -30,7 +30,7 @@ use App\Http\Controllers\Landing\LandingController;
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/profile', UserController::class)->middleware('auth');
