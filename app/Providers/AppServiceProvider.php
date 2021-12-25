@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\DetailPesanan;
 use App\Models\Pesanan;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -39,5 +40,9 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with('jumlah', $jumlah,);
         });
+
+        if (config('app.env') === 'production') {
+            URL::forceScheme('https');
+        }
     }
 }
