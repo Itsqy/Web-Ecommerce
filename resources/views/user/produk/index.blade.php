@@ -179,14 +179,13 @@
                                     </thead>
 
                                     <tbody>
-                                        @if ($kategori)
+                                        @if (!$kategori)
                                             @foreach ($produk as $p)
                                                 <tr>
                                                     <td>{{ $i++ }}</td>
                                                     <td>
                                                         <img src="{{ $p->img }}" alt=""
                                                             style="max-width: 100px !important; border-radius:5px;">
-
                                                     </td>
                                                     <td>{{ $p->nama }}</td>
                                                     <td> Rp. {{ number_format($p->harga) }}</td>
