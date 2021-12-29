@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -53,7 +54,11 @@ class KategoriController extends Controller
 
     public function delkategori($id)
     {
-        $kategori = Kategori::findOrFail($id)->delete();
+        $kategori = Kategori::findOrFail($id);
+        $produk = Produk::where('kategori_id', '=', $kategori->id);
+        $produk->delete();
+        $kategori->delete();
+
         return redirect()->back()->with('succsess', 'Data Telah Dihapus!');
     }
 }

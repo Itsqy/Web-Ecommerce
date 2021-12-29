@@ -14,14 +14,15 @@ class CreateProduksTable extends Migration
     public function up()
     {
         Schema::create('produks', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('kategori_id');
+            $table->increments('id');
             $table->string('nama')->nullable();
+            $table->foreignId('kategori_id');
             $table->integer('harga')->nullable();
             $table->string('sedia')->nullable();
             $table->integer('berat')->nullable();
             $table->text('img')->nullable();
             $table->string('slug')->nullable();
+            // $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
             $table->timestamps();
         });
     }
