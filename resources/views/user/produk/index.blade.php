@@ -179,7 +179,7 @@
                                     </thead>
 
                                     <tbody>
-                                        @if (!$kategori)
+                                        @if ($kategori)
                                             @foreach ($produk as $p)
                                                 <tr>
                                                     <td>{{ $i++ }}</td>
