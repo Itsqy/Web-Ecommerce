@@ -180,41 +180,9 @@
 
                                     <tbody>
                                         @if (!$kategori)
-                                            @foreach ($produk as $p)
-                                                <tr>
-                                                    <td>{{ $i++ }}</td>
-                                                    <td>
-                                                        <img src="{{ $p->img }}" alt=""
-                                                            style="max-width: 100px !important; border-radius:5px;">
-
-                                                    </td>
-                                                    <td>{{ $p->nama }}</td>
-                                                    <td> Rp. {{ number_format($p->harga) }}</td>
-                                                    <td>{{ $p->sedia }}</td>
-                                                    <td>{{ $p->kategori->nama_kategori }}</td>
-                                                    <td>{{ $p->berat }} Kg</td>
-                                                    <td>
-                                                        <div class="form-button-action">
-                                                            <a href="{{ route('produk.edit', $p->id) }}"><button
-                                                                    type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link btn-primary"
-                                                                    data-original-title="Edit">
-                                                                    <i class="fa fa-edit"></i>
-                                                                </button></a>
-
-                                                            <form action="{{ route('produk.destroy', $p->id) }}"
-                                                                method="POST">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link btn-danger">
-                                                                    <i class="fa fa-times"></i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
+                                            <tr>
+                                                <td colspan="3" class="text-center">Data Tidak Ditemukan</td>
+                                            </tr>
                                         @else
                                             @foreach ($produk as $p)
                                                 <tr>
