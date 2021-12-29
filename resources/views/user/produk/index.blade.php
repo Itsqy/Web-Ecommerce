@@ -191,7 +191,7 @@
                                                     <td>{{ $p->nama }}</td>
                                                     <td> Rp. {{ number_format($p->harga) }}</td>
                                                     <td>{{ $p->sedia }}</td>
-                                                    <td>{{ $p->kategori->nama_kategori }}</td>
+
                                                     <td>{{ $p->berat }} Kg</td>
                                                     <td>
                                                         <div class="form-button-action">
@@ -227,7 +227,7 @@
                                                     <td>{{ $p->nama }}</td>
                                                     <td> Rp. {{ number_format($p->harga) }}</td>
                                                     <td>{{ $p->sedia }}</td>
-
+                                                    <td>{{ $p->kategori->nama_kategori }}</td>
                                                     <td>{{ $p->berat }} Kg</td>
                                                     <td>
                                                         <div class="form-button-action">
